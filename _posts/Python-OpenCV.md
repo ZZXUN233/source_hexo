@@ -11,7 +11,7 @@ tags: [Python, OpenCV]
 # 安装
 最方便的当然是使用pip安装了
 ~~~bash
-sudo pip3 install opencv
+sudo pip3 install opencv-python
 ~~~
 其它平台的可以自己查看[官网文档](https://docs.opencv.org/3.1.0/)
 # opencv初次使用
