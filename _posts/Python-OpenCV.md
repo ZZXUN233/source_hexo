@@ -3,7 +3,7 @@ layout: post
 title: Python-OpenCV
 date: 2018-04-14 14:19:03
 categories:
-- programming
+- 编程
 tags: [Python, OpenCV]
 ---
 

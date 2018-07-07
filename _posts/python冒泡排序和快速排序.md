@@ -4,9 +4,12 @@ title: python冒泡排序和快速排序
 author: zzxun
 date: 2018-04-23 02:15:25
 categories:
+- 编程
 tags:
 - Python
 - 算法相关
+- 冒泡排序
+- 快速排序
 ---
 
 把一些最常用的算法python代码放在这里，可以从python代码中很快回忆起实现的思路和细节，比文字来的快。

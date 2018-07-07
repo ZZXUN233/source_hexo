@@ -1,10 +1,11 @@
 ---
-layout: poetry
+layout: post
 title: How long will I love you
 categories:
-  - POETRY
+  - 诗歌
 tags:
   - poetry
+  - 歌词
 date: 2018-05-06 03:27:05
 subtitle: Ellie Goulding
 ---

@@ -4,10 +4,10 @@ title: git使用1.0
 author: zzxun
 date: 2018-04-18 18:14:50
 categories:
-- Git
+- 编程
 tags:
 - git
-- study_log
+- 开始用git
 ---
 
 因为使用github+hexo写博客，同时还折腾了安卓手机上的Linux Deploy中的Debian，并且想在上面也写博客，最舒服的方式就是在Debian中安装jpuyter notebook，打开后就可以在浏览器中写博客的内容，还是很方便的，但是这就涉及到一个问题，要是我PC上写了一篇博客，又在Android上写了另外一篇博客，怎么保证两边写的博客同时部署到github上呢？

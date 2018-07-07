@@ -4,11 +4,11 @@ title: Youth
 subtitle: Samuel Ullman
 date: 2018-04-14 12:43:07
 categories:
-- POETRY
+- 诗歌
 tags:
 - poetry
 ---
-** ---Samuel Ullman **
+**---Samuel Ullman **
   
 Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life.
 

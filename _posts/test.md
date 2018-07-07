@@ -4,6 +4,7 @@ title: jupyter中写的测试
 author: zzxun
 date: 2018-04-20 11:30:12
 categories:
+- 测试
 tags:
 - test
 ---
