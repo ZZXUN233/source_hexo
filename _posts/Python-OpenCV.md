@@ -44,7 +44,6 @@ cap = cv2.VideoCapture(1)
 while True:
     ret, frame = cap.read()
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)  #将捕获的图片进行灰度处理
-    out.write(frame)
     cv2.imshow('frame', frame)  #显示为原画
     cv2.imshow('gray',gray)  #显示为灰度模式
     if cv2.waitKey(1) & 0xFF == ord('q'):  #必须写这个，按下q键时退出死循环
