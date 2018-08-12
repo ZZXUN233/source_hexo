@@ -12,7 +12,7 @@ tags:
 ---
 
 ## 枚举类型 ##
-Python中一切皆是类。
+Python中一切皆是对象。
 ~~~python 
 from enum import Enum
 
