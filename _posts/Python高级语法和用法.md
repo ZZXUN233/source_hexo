@@ -139,9 +139,10 @@ print(list(mul_list))
 一个实例，求1/1-1/3+1/5-1/7+1/9-....
 ~~~python 
 import math
+from functools import reduce
 
 lis_num = [i for i in range(1,100000)]
-result = reduce(lambda x,y:x-1/(2*y+1) if y%2!=0 else x+1/(2*y+1),1)
+result = reduce(lambda x,y :x-1/(2*y+1) if y%2!=0 else x+1/(2*y+1),lis_num,1)
 print(result*4)
 print("--------")
 print(math.pi)      

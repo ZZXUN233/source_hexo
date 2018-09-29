@@ -6,6 +6,7 @@ date: 2018-08-13 08:37:36
 categories:
 - 编程
 tags:
+- Python
 - Python装饰器
 - Python的switch替代方案
 - None是什么鬼
