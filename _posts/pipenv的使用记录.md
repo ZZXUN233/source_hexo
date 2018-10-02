@@ -82,12 +82,7 @@ Collecting requests
   Using cached https://files.pythonhosted.org/packages/65/47/7e02164a2a3db50ed6d8a6ab1d6d60b69c4c3fdf57a284257925dfc12bda/requests-2.19.1-py2.py3-none-any.whl
 Collecting idna<2.8,>=2.5 (from requests)
   Using cached https://files.pythonhosted.org/packages/4b/2a/0276479a4b3caeb8a8c1af2f8e4355746a97fab05a372e4a2c6a6b876165/idna-2.7-py2.py3-none-any.whl
-Collecting certifi>=2017.4.17 (from requests)
-  Using cached https://files.pythonhosted.org/packages/df/f7/04fee6ac349e915b82171f8e23cee63644d83663b34c539f7a09aed18f9e/certifi-2018.8.24-py2.py3-none-any.whl
-Collecting chardet<3.1.0,>=3.0.2 (from requests)
-  Using cached https://files.pythonhosted.org/packages/bc/a9/01ffebfb562e4274b6487b4bb1ddec7ca55ec7510b22e4c51f14098443b8/chardet-3.0.4-py2.py3-none-any.whl
-Collecting urllib3<1.24,>=1.21.1 (from requests)
-  Using cached https://files.pythonhosted.org/packages/bd/c9/6fdd990019071a4a32a5e7cb78a1d92c53851ef4f56f62a3486e6a7d8ffb/urllib3-1.23-py2.py3-none-any.whl
+.....
 Installing collected packages: idna, certifi, chardet, urllib3, requests
 Successfully installed certifi-2018.8.24 chardet-3.0.4 idna-2.7 requests-2.19.1 urllib3-1.23
 ~~~
@@ -115,45 +110,7 @@ pipfile.lock的内容：
             }
         ]
     },
-    "default": {
-        "certifi": {
-            "hashes": [
-                "sha256:376690d6f16d32f9d1fe8932551d80b23e9d393a8578c5633a2ed39a64861638",
-                "sha256:456048c7e371c089d0a77a5212fb37a2c2dce1e24146e3b7e0261736aaeaa22a"
-            ],
-            "version": "==2018.8.24"
-        },
-        "chardet": {
-            "hashes": [
-                "sha256:84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae",
-                "sha256:fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691"
-            ],
-            "version": "==3.0.4"
-        },
-        "idna": {
-            "hashes": [
-                "sha256:156a6814fb5ac1fc6850fb002e0852d56c0c8d2531923a51032d1b70760e186e",
-                "sha256:684a38a6f903c1d71d6d5fac066b58d7768af4de2b832e426ec79c30daa94a16"
-            ],
-            "version": "==2.7"
-        },
-        "requests": {
-            "hashes": [
-                "sha256:63b52e3c866428a224f97cab011de738c36aec0185aa91cfacd418b5d58911d1",
-                "sha256:ec22d826a36ed72a7358ff3fe56cbd4ba69dd7a6718ffd450ff0e9df7a47ce6a"
-            ],
-            "index": "pypi",
-            "version": "==2.19.1"
-        },
-        "urllib3": {
-            "hashes": [
-                "sha256:a68ac5e15e76e7e5dd2b8f94007233e01effe3e50e8daddf69acfd81cb686baf",
-                "sha256:b5725a0bd4ba422ab0e66e89e030c806576753ea3ee08554382c14e685d117b5"
-            ],
-            "markers": "python_version != '3.1.*' and python_version < '4' and python_version != '3.2.*' and python_version != '3.0.*' and python_version >= '2.6' and python_version != '3.3.*'",
-            "version": "==1.23"
-        }
-    },
+   .....
     "develop": {}
 }
 ~~~
@@ -216,7 +173,48 @@ pipenv run test.py
 
 pipenv会自动使用自己的python环境执行脚本。
 
-** 突然发现记录了一堆废话，还不知不觉写（搬）了这么长的内容！主要还是无聊了！ **
+## 补充 ##
+
+注意在pipenv搭建的新环境中，同样可以使用pip命令，但是在使用前一定要切换到pipenv的环境下，否则很有可能调用了系统中的全局pip，看下面的例子：
+
+~~~bash
+PS I:\poems\sqlite_demo> pip list
+Package               Version
+--------------------- -----------
+absl-py               0.2.0
+astor                 0.7.0
+beautifulsoup4        4.6.0
+bleach                1.5.0
+bs4                   0.0.1
+builtwith             1.3.3
+....
+PS I:\poems\sqlite_demo> pipenv shell
+Launching subshell in virtual environment…
+Windows PowerShell
+版权所有 (C) Microsoft Corporation。保留所有权利。
+
+PS I:\poems\sqlite_demo> pip list
+Package    Version
+---------- -------
+pip        18.0
+setuptools 40.4.3
+SQLAlchemy 1.2.12
+sqlsoup    0.9.1
+wheel      0.32.0
+PS I:\poems\sqlite_demo>
+~~~
+
+从原有的requests.txt（注意这个文件的编码方式要为utf-8）中安装依赖库：
+
+~~~bash
+pipenv install -r requests.txt
+~~~
+
+也可以直接使用pip安装requests.txt中依赖。安装完成后pipenv也会自动更新对应的文件pipfile。
+
+~~~bash
+pip install -r requests.txt
+~~~
 
 细节全部在文档中！
 
